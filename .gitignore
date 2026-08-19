@@ -1,0 +1,11 @@
+.DS_Store
+.build.*
+.build/
+.swiftpm/
+dist/
+*.app/
+*.dSYM/
+
+# Local development logs, caches, and runtime copies.
+*.log
+.runtime-cache/
