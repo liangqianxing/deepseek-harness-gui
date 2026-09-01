@@ -4,6 +4,6 @@
   "private": true,
   "description": "Build-time runtime manifest for DeepSeek Harness GUI.",
   "dependencies": {
-    "@deepseek-ai/dsh": "0.1.0-rc.7"
+    "@deepseek-ai/dsh": "0.1.0-rc.8"
   }
 }
