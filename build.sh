@@ -71,6 +71,7 @@ process.stdout.write(manifest.dependencies["@deepseek-ai/dsh"]);
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources/runtime"
 
 xcrun swiftc \
+  -target "$(uname -m)-apple-macosx13.0" \
   -swift-version 5 \
   -O \
   -framework Cocoa \
