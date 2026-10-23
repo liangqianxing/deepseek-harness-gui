@@ -171,6 +171,8 @@ DSH_GUI_PORT=3098 \
   "$HOME/Applications/DeepSeek Harness GUI.app/Contents/MacOS/DeepSeekHarnessGUI"
 ```
 
+端口范围为 `0...65535`；`0` 表示自动选择空闲端口。未设置、非整数或超出范围的值会回退到默认端口 `3080`。
+
 Finder 启动应用不会读取当前终端的临时环境变量；需要固定端口时，可以在 Shell 中直接运行上面的命令，或在自己的启动器中设置环境变量。
 
 ### 日志位置
