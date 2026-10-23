@@ -2,7 +2,12 @@ import Cocoa
 import WebKit
 import Darwin
 
-private let defaultPort = Int(ProcessInfo.processInfo.environment["DSH_GUI_PORT"] ?? "3080") ?? 3080
+private let defaultPort: Int = {
+    guard let value = ProcessInfo.processInfo.environment["DSH_GUI_PORT"],
+          let port = Int(value),
+          (0...65535).contains(port) else { return 3080 }
+    return port
+}()
 
 enum DSHServiceState {
     case checking
