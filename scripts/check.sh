@@ -9,7 +9,9 @@ cleanup() {
 }
 trap cleanup EXIT
 
-zsh -n "$ROOT/build.sh" "$ROOT/Resources/start-dsh.sh" "$ROOT/scripts/check.sh"
+for script in "$ROOT/build.sh" "$ROOT/Resources/start-dsh.sh" "$ROOT/scripts/check.sh"; do
+  zsh -n "$script"
+done
 plutil -lint "$ROOT/Resources/Info.plist"
 ICONSET="$SCRATCH_PATH/AppIcon.iconset"
 swift "$ROOT/scripts/generate-icon.swift" "$ICONSET"
